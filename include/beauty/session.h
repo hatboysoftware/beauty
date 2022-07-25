@@ -11,6 +11,8 @@ namespace Beauty {
 namespace Client {
 
 class RequestBuilder;
+class Request;
+class Response;
 class Option;
 
 typedef std::function<void(Request &req)> RequestFilter;
