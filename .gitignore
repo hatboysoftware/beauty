@@ -32,3 +32,6 @@
 *.app
 
 CMakeUserPresets.json
+
+.vscode
+build/

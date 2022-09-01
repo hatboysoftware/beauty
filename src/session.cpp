@@ -1,2 +1,0 @@
-#include <beauty/session.h>
-

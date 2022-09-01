@@ -1,11 +1,10 @@
-#ifndef BEAUTY_SESSION_H_INCLUDED_
-#define BEAUTY_SESSION_H_INCLUDED_
+#ifndef BEAUTY_SESSION_HPP_INCLUDED_
+#define BEAUTY_SESSION_HPP_INCLUDED_
 
 #include <string>
 #include <list>
 #include <tuple>
 #include <functional>
-
 
 namespace Beauty {
 namespace Client {
@@ -18,7 +17,7 @@ class Option;
 typedef std::function<void(Request &req)> RequestFilter;
 typedef std::function<void(Response& req)> ResponseHandler;
 
-class Session {
+class HTTPClient {
 public:
   RequestBuilder &request(const std::string &url);
 
@@ -42,4 +41,4 @@ public:
 } // namespace Client
 } // namespace Beauty
 
-#endif // BEAUTY_SESSION_H_INCLUDED_
+#endif // BEAUTY_SESSION_HPP_INCLUDED_

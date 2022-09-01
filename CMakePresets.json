@@ -1,0 +1,48 @@
+{
+    "version": 5,
+    "configurePresets": [{
+            "name": "vc17",
+            "displayName": "Win64 - VC17",
+            "generator": "Visual Studio 17 2022",
+            "binaryDir": "${sourceDir}/build/vc17",
+            "cacheVariables": {
+                "CMAKE_INSTALL_PREFIX": "${sourceDir}/build/install/${presetName}"
+            }
+        },
+        {
+            "name": "linux make",
+            "displayName": "Unix Makefiles",
+            "generator": "Ninja",
+            "binaryDir": "${sourceDir}/build/make",
+            "cacheVariables": {
+                "CMAKE_INSTALL_PREFIX": "${sourceDir}/build/install/${presetName}"
+            }
+        }
+    ],
+    "buildPresets": [{
+            "name": "Debug Win64 VC17",
+            "configurePreset": "vc17",
+            "targets": ["beauty", "simple_client", "simple_server"],
+            "verbose": true
+        },
+        {
+            "name": "Release Win64 VC17",
+            "configurePreset": "vc17",
+            "targets": ["beauty", "simple_client", "simple_server"],
+            "verbose": true
+        },
+        {
+            "name": "Debug Linux Make",
+            "configurePreset": "make",
+            "targets": ["beauty", "simple_client", "simple_server"],
+            "verbose": true
+        },
+        {
+            "name": "Release Linux Make",
+            "configurePreset": "make",
+            "targets": ["beauty", "simple_client", "simple_server"],
+            "verbose": true
+        }
+    ]
+
+}

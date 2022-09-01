@@ -1,4 +1,4 @@
-#include <beauty/session.h>
+#include <beauty/HTTPClient.h>
 
 
 
